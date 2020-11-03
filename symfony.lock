@@ -1,4 +1,13 @@
 {
+    "friendsofsymfony/rest-bundle": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.2",
+            "ref": "cad41ef93d6150067ae2bb3c7fd729492dff6f0a"
+        }
+    },
     "php": {
         "version": "7.4"
     },
@@ -134,6 +143,9 @@
             "config/routes.yaml"
         ]
     },
+    "symfony/security-core": {
+        "version": "v4.4.16"
+    },
     "symfony/service-contracts": {
         "version": "v2.2.0"
     },
@@ -145,5 +157,11 @@
     },
     "symfony/yaml": {
         "version": "v4.4.16"
+    },
+    "willdurand/jsonp-callback-validator": {
+        "version": "v1.1.0"
+    },
+    "willdurand/negotiation": {
+        "version": "v2.3.1"
     }
 }
