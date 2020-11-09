@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Handler;
 
 use App\Command\AddNewProduct;
+use App\Domain\Product;
 use App\Repository\ProductsRepositoryInterface;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
@@ -17,8 +18,8 @@ final class AddNewProductHandler implements MessageHandlerInterface
         $this->repository = $repository;
     }
 
-    public function __invoke(AddNewProduct $command)
+    public function __invoke(AddNewProduct $command): Product
     {
-        $this->repository->add($command->getProduct());
+        return $this->repository->add($command->getProduct());
     }
 }

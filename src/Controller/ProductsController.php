@@ -32,8 +32,6 @@ final class ProductsController extends AbstractFOSRestController
      */
     public function createProduct(NewProduct $product, ConstraintViolationListInterface $validationErrors)
     {
-        $this->handle(new AddNewProduct($product));
-
-        return $product;
+        return $this->handle(new AddNewProduct($product));
     }
 }
